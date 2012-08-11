@@ -16,6 +16,6 @@ Nico Nico Programming 6 として、今回はTitaniumでiPhoneアプリを作っ
 @tkihiraの[twitter]までお気軽にご連絡ください！感想なんかも楽しみにしています！
 
 
-[こちら]: http://
+[こちら]: http://www.nicovideo.jp/watch/sm18589881
 [twitter]: http://twitter.com/tkihira
 
