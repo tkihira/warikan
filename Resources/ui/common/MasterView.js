@@ -5,7 +5,6 @@ var Model = require('services/Model');
 function MasterView() {
 	//create object instance, parasitic subclass of Observable
 	var self = Ti.UI.createView({
-		backgroundColor: '#f00'
 	});
 
 	var groupData = Ti.UI.createTableViewSection({

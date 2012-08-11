@@ -32,7 +32,7 @@ function DetailView() {
 
 	var amount = money;
 	var defaultPrice = Model.calcFunc(money / people / unit) * unit;
-	var max = Math.min(money, defaultPrice * 10);
+	var max = Math.min(money, defaultPrice * 5);
 
 	var peopleList = [];
 	for(var i = 0; i < people - 1; i++) {
@@ -84,8 +84,8 @@ function DetailView() {
 				min: 0,
 				max: max,
 				value: defaultPrice,
-				left: 105,
-				right: 90
+				left: 95,
+				right: 60
 			});
 			slider.addEventListener('change', function() {
 				if(info.price == slider.value) {
@@ -107,13 +107,13 @@ function DetailView() {
 
 			var tabbed = Ti.UI.createTabbedBar({
 				index: 0,
-				labels: ['割勘', '確定'],
+				labels: ['未', '確'],
 				right: 5,
-				width: 85,
+				width: 55,
 				height: 25
 			});
 			background.add(tabbed);
-			tabbed.addEventListener('change', function(e) {
+			tabbed.addEventListener('click', function(e) {
 				info.setFix(e.index == 1);
 			});
 			info.setFix = function(value) {
