@@ -26,6 +26,7 @@ function MasterView() {
 		hintText: '総額を入力',
 		right: 5,
 		width: 200,
+		clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ALWAYS,
 		keyboardType: Titanium.UI.KEYBOARD_NUMBER_PAD
 	});
 	moneyField.addEventListener('change', function() {
@@ -49,6 +50,7 @@ function MasterView() {
 		hintText: '幹事も含めて入力',
 		right: 5,
 		width: 200,
+		clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ALWAYS,
 		keyboardType: Titanium.UI.KEYBOARD_NUMBER_PAD
 	});
 	peopleField.addEventListener('change', function() {
@@ -124,7 +126,7 @@ function MasterView() {
 					title: '計算結果',
 					backButtonTitle: '戻る'
 				});
-				var detailView = new DetailView();
+				var detailView = new DetailView(win);
 				win.add(detailView);
 				self.nav.open(win);
 			}

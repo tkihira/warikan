@@ -1,8 +1,15 @@
 var Model = require('services/Model');
 
-function DetailView() {
+function DetailView(win) {
 	var self = Ti.UI.createView({
 	});
+
+	var navTabbed = Ti.UI.createTabbedBar({
+		labels: ['有利', '不利'],
+		width: 80,
+		index: Model.calcFunc == Math.ceil? 0: 1
+	});
+	win.rightNavButton = navTabbed;
 	
 	var groupData = Ti.UI.createTableViewSection({
 		headerTitle: '総額: ' + Model.money + '円'
@@ -147,6 +154,7 @@ function DetailView() {
 		for(var i = 0; i < peopleList.length; i++) {
 			var info = peopleList[i];
 			if(info.selected) {
+				value = value || info.price;
 				info.setPrice(value);
 				info.setFix(true);
 				amount -= value;
@@ -172,6 +180,12 @@ function DetailView() {
 		style: Titanium.UI.iPhone.TableViewStyle.GROUPED
 	});
 	self.add(tableView);
+
+	navTabbed.addEventListener('click', function(e) {
+		//clearSelected();
+		Model.calcFunc = (e.index == 0)? Math.ceil: Math.floor;
+		calcAllPrice();
+	});
 
 	return self;
 };
