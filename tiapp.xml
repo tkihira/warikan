@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+    <property name="acs-oauth-secret-production" type="string">ZgYeHUKnhDOsVqt10Den5NmCZQsW64rY</property>
+    <property name="acs-oauth-key-production" type="string">p5XuYwMCVIJsBmwvvpgFgsMOS2XeODiQ</property>
+    <property name="acs-api-key-production" type="string">xjUxIJPDlDMXnMMpjkLv1n5sWlqQ1Ebw</property>
+    <property name="acs-oauth-secret-development" type="string">gUGYAX3IMYkVZhuSVywkVXS5rbdpYfyT</property>
+    <property name="acs-oauth-key-development" type="string">ePFHwVQP3R0ljbfwrGj7FLE8UgAxHv3o</property>
+    <property name="acs-api-key-development" type="string">BFWD0WPL0R0Vn9ib6sXzHmf1IwgNQQbm</property>
+    <deployment-targets>
+        <target device="mobileweb">false</target>
+        <target device="iphone">true</target>
+        <target device="ipad">true</target>
+        <target device="android">false</target>
+        <target device="blackberry">false</target>
+    </deployment-targets>
+    <sdk-version>2.1.1.GA</sdk-version>
+    <id>jp.nmi.warikan</id>
+    <name>warikan</name>
+    <version>1.0</version>
+    <publisher>tkihira</publisher>
+    <url>http://</url>
+    <description>not specified</description>
+    <copyright>2012 by tkihira</copyright>
+    <icon>appicon.png</icon>
+    <persistent-wifi>false</persistent-wifi>
+    <prerendered-icon>false</prerendered-icon>
+    <statusbar-style>default</statusbar-style>
+    <statusbar-hidden>false</statusbar-hidden>
+    <fullscreen>false</fullscreen>
+    <navbar-hidden>false</navbar-hidden>
+    <analytics>true</analytics>
+    <guid>5e5010e7-3b2a-460c-ac78-99695b7740dd</guid>
+    <property name="ti.ui.defaultunit">system</property>
+    <iphone>
+        <orientations device="iphone">
+            <orientation>Ti.UI.PORTRAIT</orientation>
+        </orientations>
+        <orientations device="ipad">
+            <orientation>Ti.UI.PORTRAIT</orientation>
+            <orientation>Ti.UI.UPSIDE_PORTRAIT</orientation>
+            <orientation>Ti.UI.LANDSCAPE_LEFT</orientation>
+            <orientation>Ti.UI.LANDSCAPE_RIGHT</orientation>
+        </orientations>
+    </iphone>
+    <android xmlns:android="http://schemas.android.com/apk/res/android"/>
+    <mobileweb>
+        <precache/>
+        <splash>
+            <enabled>true</enabled>
+            <inline-css-images>true</inline-css-images>
+        </splash>
+        <theme>default</theme>
+    </mobileweb>
+    <modules>
+        <module platform="commonjs" version="2.2.0">ti.cloud</module>
+    </modules>
+</ti:app>
